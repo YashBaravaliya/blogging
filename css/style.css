@@ -16,7 +16,7 @@
     /* flex-wrap: wrap; */
 }
 
-nav{
+/* nav{
     height: 54px;
     width: 100vw;
     display: flex;
@@ -26,6 +26,10 @@ nav{
     box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
+} */
+
+.search-box{
+    margin-right: 20px;
 }
 
 .search {
@@ -99,6 +103,64 @@ a{
     text-decoration: none;
 }
 
+.nav-contaner{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid black;
+    height: 54px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    /* overflow: hidden; */
+    z-index: 2;
+}
+
+nav .logo img{
+    width: 40px;
+    margin-left: 20px;
+}
+
+nav ol{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* background: #000; */
+    width: auto;
+    margin-right: 10px;
+    display:flex ;
+    background-color: #EFEBE4;
+    list-style: none;
+    /* border: 1px solid; */
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    height: 30px;
+    margin: 0 10px;
+}
+
+nav ol a{
+    text-align: justify;
+    margin: 20px;
+    text-decoration: none;
+    color: #646464;
+    font-family: 'Roboto', sans-serif;
+    /* border-left: 1px solid white; */
+    /* padding: 10px; */
+    transition: 0.7s;
+}
+
+nav ol a:hover{
+    color: #000;
+    /* font-size: 20px; */
+}
+
+
+
 .sidebar{
     /* left: 0; */
     display: flex;
@@ -127,6 +189,8 @@ a{
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    margin-top: 150px;
     flex-wrap: wrap;
 }
 
@@ -137,7 +201,7 @@ a{
 } */
 
 .banner{
-
+    object-fit: cover;
     margin: 20px 10px 0 0;
     position: relative;
     height: 50%;
@@ -147,6 +211,7 @@ a{
     background-color: #fff;
     border-radius: 10px;
     border: .5px solid rgba(0, 0, 0, 0.684);
+    overflow: hidden;
 }
 
 .contentbox{
@@ -260,4 +325,45 @@ a{
     background: transparent;
     height: auto;
     margin: 30px 0 0 0 ;
+}
+
+
+/* ------------bloging---------- */
+.content{
+    /* background: #000; */
+    padding-top: 50px;
+    justify-content: center;
+    width: 60vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .content{
+        width: 80vw;
+        /* background: #000; */
+    }
+}
+
+@media screen and (max-width: 767px){
+    .content{
+        width: 100vw;
+        padding: 0px;
+        padding: 5px;
+    }
+
+    nav ol a{
+        font-size: 12px;
+        margin: 8px;
+    }
+
+    nav ol{
+        margin: auto 2px;
+    }
+
+    nav p{
+        display: none;
+    }
+
+    .banner{
+        height: 180px;
+    }
 }
